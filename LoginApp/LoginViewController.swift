@@ -32,7 +32,6 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordButtonTapped() {
         showAlert(title: "Oops!", message: "Your password is \"Admin\"!")
     }
-    
 }
 
 extension LoginViewController {
