@@ -23,6 +23,19 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func logInButtonTapped() {
+        guard userNameTextField.text == "Admin" && passwordTextField.text == "Admin" else {
+            showAlert(
+                title: "Invalid Login or Password",
+                message: "Please, enter correct login and password"
+            )
+            passwordTextField.text = ""
+            return
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.greetings = userNameTextField.text
     }
     
     @IBAction func forgotNameButtonTapped() {
@@ -31,6 +44,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonTapped() {
         showAlert(title: "Oops!", message: "Your password is \"Admin\"!")
+    }
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard segue.source is WelcomeViewController else { return }
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 
@@ -42,3 +64,4 @@ extension LoginViewController {
         present(alert, animated: true)
     }
 }
+
