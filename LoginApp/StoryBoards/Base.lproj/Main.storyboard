@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-377" y="129"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="n3g-KG-adj">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Ntj-mA-hbB" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Ntj-mA-hbB" customClass="WelcomeViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="DtG-Ri-Rl3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +150,7 @@
                             <constraint firstItem="dZQ-el-www" firstAttribute="top" secondItem="76j-Za-ySW" secondAttribute="top" constant="109" id="zV6-EX-fGM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yI1-Ks-ltW"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="yI1-Ks-ltW"/>
                     <navigationItem key="navigationItem" id="C5S-bl-gGP"/>
                     <connections>
                         <outlet property="greetingsLabel" destination="H0F-f7-cj2" id="Vrj-zH-Z5A"/>
@@ -168,6 +168,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="w36-gb-UYU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YoX-hs-ZgC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -218,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="3106" y="481"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="Tqu-zm-x7n">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dpi-Lv-EfZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bd6-86-DzF"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="person" catalog="system" id="bd6-86-DzF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2nM-UB-l55">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="108"/>
@@ -239,6 +240,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
