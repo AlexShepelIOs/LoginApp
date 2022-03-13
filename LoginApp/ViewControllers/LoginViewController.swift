@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let color1 = UIColor(red: 89 / 255, green: 153 / 255, blue: 141 / 255, alpha: 1.0).cgColor
         let color2 = UIColor(red: 155 / 255, green: 243 / 255, blue: 99 / 255, alpha: 1.0).cgColor
         let color3 = UIColor(red: 73 / 255, green: 184 / 255, blue: 121 / 255, alpha: 1.0).cgColor
