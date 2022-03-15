@@ -50,7 +50,6 @@
                                         </state>
                                         <connections>
                                             <action selector="logInButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEa-bg-j4z"/>
-                                            <segue destination="uJ5-dZ-1oD" kind="presentation" identifier="openWelcomeVC" modalPresentationStyle="fullScreen" id="QUg-ug-LSs"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pN0-Tg-JUD">
@@ -96,6 +95,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="9lp-q3-15v" id="oD8-z5-Lh2"/>
                         <outlet property="userNameTextField" destination="Av5-mB-tY9" id="VEF-wP-AXJ"/>
+                        <segue destination="uJ5-dZ-1oD" kind="presentation" identifier="openWelcomeVC" modalPresentationStyle="fullScreen" id="K5i-zx-Ahp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
