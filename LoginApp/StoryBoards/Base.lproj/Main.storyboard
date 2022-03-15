@@ -50,7 +50,7 @@
                                         </state>
                                         <connections>
                                             <action selector="logInButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEa-bg-j4z"/>
-                                            <segue destination="uJ5-dZ-1oD" kind="show" identifier="openWelcomeVC" id="QUg-ug-LSs"/>
+                                            <segue destination="uJ5-dZ-1oD" kind="presentation" identifier="openWelcomeVC" modalPresentationStyle="fullScreen" id="QUg-ug-LSs"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pN0-Tg-JUD">
@@ -105,13 +105,13 @@
         <!--Home-->
         <scene sceneID="n3g-KG-adj">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Ntj-mA-hbB" customClass="WelcomeViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ntj-mA-hbB" customClass="WelcomeViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="DtG-Ri-Rl3">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dZQ-el-www">
-                                <rect key="frame" x="16" y="109" width="358" height="100.33333333333331"/>
+                                <rect key="frame" x="16" y="153" width="358" height="100.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0F-f7-cj2">
                                         <rect key="frame" x="148.33333333333334" y="0.0" width="61.666666666666657" height="31.333333333333332"/>
@@ -128,7 +128,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOi-eg-HPb">
-                                <rect key="frame" x="120" y="604" width="150" height="39"/>
+                                <rect key="frame" x="120" y="658" width="150" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out">
@@ -164,7 +164,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="5gK-NU-XAO">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="uJ5-dZ-1oD" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uJ5-dZ-1oD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="w36-gb-UYU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YoX-hs-ZgC">
@@ -181,12 +181,12 @@
             </objects>
             <point key="canvasLocation" x="394" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="koD-2p-lBi">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="2ab-6b-KGU" sceneMemberID="viewController">
+                <viewController id="2ab-6b-KGU" customClass="UserInfoViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idm-Z0-KwE">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="29E-6v-aox"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -203,30 +203,43 @@
             </objects>
             <point key="canvasLocation" x="2230.7692307692305" y="480.5687203791469"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="Mic-B3-TQY">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="6FE-Hb-cHy" sceneMemberID="viewController">
+                <viewController id="6FE-Hb-cHy" customClass="ImageViewController" customModule="LoginApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xt5-8j-p82">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LVz-q7-KJW">
+                                <rect key="frame" x="75" y="304.66666666666669" width="240" height="240.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="DS1-oI-JmH"/>
+                                    <constraint firstAttribute="width" constant="240" id="qPH-4w-Myr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="86M-Hx-gav"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LVz-q7-KJW" firstAttribute="centerX" secondItem="86M-Hx-gav" secondAttribute="centerX" id="k0K-9x-aTA"/>
+                            <constraint firstItem="LVz-q7-KJW" firstAttribute="centerY" secondItem="86M-Hx-gav" secondAttribute="centerY" id="yUR-47-MAg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bMW-Tk-MS8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1T-90-E9P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3106" y="481"/>
+            <point key="canvasLocation" x="3104.8000000000002" y="480.80959520239884"/>
         </scene>
-        <!--Info-->
+        <!--User-->
         <scene sceneID="Tqu-zm-x7n">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dpi-Lv-EfZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="person" catalog="system" id="bd6-86-DzF"/>
+                    <tabBarItem key="tabBarItem" title="User" image="person" catalog="system" id="bd6-86-DzF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2nM-UB-l55">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="108"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2nM-UB-l55">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

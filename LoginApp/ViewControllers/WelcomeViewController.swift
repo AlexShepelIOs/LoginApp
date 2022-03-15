@@ -11,12 +11,12 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var greetingsLabel: UILabel!
     
-    var user = ""
+    var user: UserData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        greetingsLabel.text = "Welcome, \(user)!"
+        greetingsLabel.text = "Welcome, \(user.person.fullName)!"
 
         
         let color1 = UIColor(red: 89 / 255, green: 153 / 255, blue: 141 / 255, alpha: 1.0).cgColor
